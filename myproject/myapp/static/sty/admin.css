@@ -1,0 +1,52 @@
+/* admin.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 0.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3e4a61;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2d3b52;
+}
+
+h2 {
+    color: #3e4a61;
+}
+
+.message {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

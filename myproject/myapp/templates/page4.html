@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+    {% load static %}  <!-- Load static template tag -->
+    <link rel="stylesheet" href="{% static 'sty/one.css' %}">  <!-- Reference the CSS file -->
+</head>
+<body>
+    <h1>{{context}}</h1>
+
+
+
+    <h1>Page 4</h1>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

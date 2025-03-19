@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enroll Student</title>
+</head>
+<body>
+    <h2>Enroll a Student</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- ✅ Render form fields -->
+        <button type="submit">Save Student</button>
+    </form>
+</body>
+</html>

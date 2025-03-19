@@ -1,0 +1,106 @@
+<!-- myapp/templates/myapp/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Hello Django{% endblock %}</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <style>
+        .n{
+            background-color: blue;
+         
+
+        }
+      .nav-item>a{
+            color: beige;
+      }
+    </style>
+</head>
+<body>
+
+
+
+<!-- 
+    <h1>Hello, Django with HTML!</h1>
+    <h1 style="color: blue;">welcome Django!!!</h1>
+    {{data}}
+    <br>
+    {{data.name}}
+    <br>
+  {{data.information}} -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light n">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+ 
+
+
+
+  <h1>Welcome to the Home Page</h1>
+  <nav>
+      <ul>
+          <li><a href="{% url 'page1' %}">Page 1</a></li>
+          <li><a href="{% url 'page2' %}">Page 2</a></li>
+          <li><a href="{% url 'page3' %}">Page 3</a></li>
+      </ul>
+  </nav>
+
+
+ 
+<!-- 
+  <h1>Contact Us</h1>
+  <form method="POST">
+      {% csrf_token %}
+      {{ get_form.as_p }}
+      <button type="submit">Submit</button>
+  </form> -->
+
+
+   
+
+  <h1>Product List</h1>
+  <ul>
+      {{products}}
+      {% for product in products %}
+          <li>{{ product.name }} - ${{ product.price }}</li>
+      {% endfor %}
+  </ul>
+  <a href="{% url 'create_product' %}">Create a New Product</a> 
+
+  {{data}}
+
+  <main>
+    {% block content %}
+       
+   
+    {% endblock %}
+</main>
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+
+
+
+

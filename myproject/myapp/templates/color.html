@@ -1,0 +1,27 @@
+<!-- myapp/templates/myapp/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    {% load static %}  <!-- Load static template tag -->
+    <link rel="stylesheet" href="{% static 'sty/one.css' %}">  <!-- Reference the CSS file -->
+   
+</head>
+<body>
+    <h1>Welcome to Django with CSS!</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel consequatur mollitia nisi temporibus rem fugiat cumque ullam, repudiandae voluptate iure! Accusamus dicta quia cumque repellat incidunt blanditiis repudiandae explicabo iure!</p>
+    <!-- <img src="{% static 'one.jpg' %}" alt="Example Image" width="300"> -->
+
+    <h1>create product</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'product_list' %}">show Product</a> 
+
+    
+</body>
+</html>

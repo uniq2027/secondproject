@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create Course</title>
+</head>
+<body>
+    <h2>Create Course</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- ✅ This renders input fields correctly -->
+        <button type="submit">Save Course</button>
+    </form>
+</body>
+</html>
