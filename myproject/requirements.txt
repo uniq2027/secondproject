@@ -2,3 +2,5 @@
 pymupdf
 django
 gunicorn
+waitress
+
